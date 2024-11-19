@@ -14,6 +14,7 @@ app = Flask('churn')
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    # json = Python dictionary
     customer = request.get_json()
 
     X = dv.transform([customer])
